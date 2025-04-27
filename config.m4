@@ -8,7 +8,7 @@ if test "$PHP_DECIMAL" != "no"; then
 
     MACHINE_INCLUDES=$($CC -dumpmachine)
     AC_MSG_CHECKING([for libmpdec library in default path])
-    for i in $PHP_LIBMPDEC_PATH /usr /usr/local; do
+    for i in $PHP_LIBMPDEC_PATH /usr /usr/local /app/.linuxbrew/Cellar/mpdecimal/4.0.0; do
       if test -r $i/$PHP_LIBDIR/libmpdec.$SHLIB_SUFFIX_NAME || test -r $i/$PHP_LIBDIR/libmpdec.a; then
         LIBMPDEC_DIR=$i/$PHP_LIBDIR
         LIBMPDEC_INC=$i/include
